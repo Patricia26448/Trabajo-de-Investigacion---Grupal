@@ -34,9 +34,9 @@ FinFuncion
 //salida: kg a lb , lb a kg
 
 Funcion  Conversor_de_kilogramos_a_libras
-    Definir opcion Como Entero
+    Definir opc Como Entero
     Definir cantidad, resultado Como Real	
-	cantidad=0; resultado=0; opc=0
+	cantidad=0; resultado=0; //opc=0
 	
 	//ingresar un menu de opciones para elegir si kilogramos o libras 
     Escribir "Conversor de peso"   
@@ -693,7 +693,7 @@ FinFuncion
 
 Funcion Verificador_Triple
     Definir numm1, numm2 Como Entero
-	numm1=0 ; numm=0
+	numm1=0 ; numm2=0;
 	
     Escribir "Ingrese el primer número:"
     Leer numm1
@@ -986,7 +986,8 @@ FinFuncion
 //salida: escribir si el número de caracteres es largo o corto
 
 Funcion Palabra_corta_o_larga
-	Definir palabra Como Caracter
+	Definir cantidadCaracteres Como Entero
+	Definir palabra  Como Caracter
 	palabra= ""
 	
 	Escribir "Ingresa un texto: "
@@ -1037,48 +1038,14 @@ Algoritmo Menú_Ciclo
 	opciones=0
 	
 	Mientras opciones <> 31 Hacer //"Mientras" permite que el menú se muestre repetitivamente hasta seleccionar la opción 31. Salida
-		Escribir ""
+		//Escribir ""
 		Escribir "Menú de opciones"
-		Escribir "Nivel Básico (Secuenciales y Condicionales Simples):"
-		Escribir "1. Calculadora_vuelto"
-		Escribir "2. Conversor_de_kilogramos_a_libras"
-		Escribir "3. Calculadora_descuentos"
-		Escribir "4. Calcular_IVA_Y_descuento"
-		Escribir "5. Comparacion_De_Precios"
-		Escribir "6. Clasificación_edad"
-		Escribir "7. Identificador_de número_par_e_impar"
-		Escribir "8. Puntuacion_servicio"
-		Escribir "9. Verificador_de_múltiplos"
-		Escribir "10. Calculadora_propina"
-		Escribir ""
-		Escribir "Nivel Intermedio (Condicionales Anidadas y Complejas):"
-		Escribir "11. clasificador_compra"
-		Escribir "12. Clasificación_signo"
-		Escribir "13. Verificador_Acceso_Tienda"
-		Escribir "14. Descuento_Edad_Monto"
-		Escribir "15. vuelto_en_billetes_de10_5"
-		Escribir "16. Categorizador_De_Dia_De_La_Semana"
-		Escribir "17. Clasificador_Precio_Producto"
-		Escribir "18. Año_bisiesto"
-		Escribir "19. Conversor_hora"
-		Escribir "20. Verificador_Triple"
-		Escribir "21. Riesgo_de_sintomas"
-		Escribir "22. Presion_arterial"
-		Escribir ""
-		Escribir "Nivel Básico (Lógica Simples de cadenas y Comparaciones):"
-		Escribir "23. Saludo_personalizado"
-		Escribir "24. Carácter_vocal"
-		Escribir "25. Verificar_Constante "
-		Escribir "26. Nombres_iguales"
-		Escribir "27. Verificar_letra_mayúscula_minúscula"
-		Escribir "28. NOMBRE_ENTERO"
-		Escribir "29. Palabra_corta_o_larga"
-		Escribir "30. Contar_carácteres"
-		Escribir ""
-		Escribir "31. Salir"
+		Escribir "Escoja una opcion del 1 al 30"
+		Escribir "Para salir escoja la opcion 31"
 		Escribir "Seleccione una de las opciones: "
 		Leer opciones
 		Escribir ""
+		Limpiar Pantalla
 		
 		//Se utiliza "segun" para evaluar una variable y ejecutar distintas acciones dependiendo de su valor
 		//Se utiliza "hacer" ya que indica la acción que debe ejecutarse cuando se cumpla una de las condiciones dentro de "segun"
@@ -1086,13 +1053,20 @@ Algoritmo Menú_Ciclo
 			//Se usa "caso" dentro de la estructura "segun" para definir cada posible valor de la variable evaluada
 			Caso 1:
 				//Se les coloca los "()" para indicar que esas son llamadas a funciones
+				Escribir "1. Calculadora_vuelto"
                 Calculadora_vuelto()
+				
+				
 			Caso 2:
+				Escribir "2. Conversor_de_kilogramos_a_libras"
 				Conversor_de_kilogramos_a_libras()
+				
 			Caso 3:
 				Calculadora_descuentos()
+				
 			Caso 4:
 				Calcular_IVA_Y_descuento()
+				
 			caso 5:
 				Comparacion_De_Precios()
             Caso 6:
